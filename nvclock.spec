@@ -1,11 +1,12 @@
 Summary:	nvidia overclock utility
-Summary(pl):	Narzêdzie do podkrêcania kart nvidia
+Summary(pl):	Narzêdzie do podkrêcania kart nvidii
 Name:		nvclock
 Version:	0.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://ftp.evil3d.net/pub/Evil3D/nvclock/%{name}%{version}.tar.gz
+Source1:	nvclock.png
 URL:		http://www.evil3d.net/products/nvclock/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -20,18 +21,24 @@ Warning! It can burn your graphics card!
 
 %description -l pl
 Ten program pozwala Ci na podkrêcanie Twojej karty graficznej NVidia
-pod Linuksem. Uwaga! Mo¿e on spaliæ twoj± kartê graficzn±!
+pod Linuksem. Uwaga! Mo¿e on spaliæ kartê graficzn±!
 
 %package gtk
-Summary:	GTK frontend for nvclock
-Summary(pl):	Interfejs GTK dla nvclock
+Summary:	GTK version of nvclock
+Summary(pl):	nvclock z interfejsem GTK
 Group:		Applications/System
 
 %description gtk
-GTK frontend for nvclock.
+This program allows you to overclock your nvidia card under linux.
+Warning! It can burn your graphics card!
+
+This is GTK version.
 
 %description gtk -l pl
-Interfejs GTK dla nvclock.
+Ten program pozwala Ci na podkrêcanie Twojej karty graficznej NVidia
+pod Linuksem. Uwaga! Mo¿e on spaliæ kartê graficzn±!
+
+To jest wersja GTK.
 
 %prep
 %setup -q -n %{name}%{version}
@@ -48,11 +55,24 @@ automake -a -c -f
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/System,%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf ABOUT AUTHORS ChangeLog FAQ README
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
+cat >$RPM_BUILD_ROOT%{_applnkdir}/System/nvclock.desktop <<EOF
+[Desktop Entry]
+Name=nvclock
+Comment=nvidia overclock utility
+Comment[pl]=Narzêdzie do podkrêcania kart nvidii
+Icon=nvclock.png
+Exec=nvclock_gtk
+Terminal=0
+Type=Application
+EOF
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,3 +85,5 @@ rm -rf $RPM_BUILD_ROOT
 %files gtk
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/nvclock_gtk
+%{_pixmapsdir}/*
+%{_applnkdir}/System/*
