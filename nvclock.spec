@@ -26,7 +26,7 @@ Warning! It can burn your graphics card!
 
 %description -l pl
 Ten program pozwala na podkrêcanie karty graficznej NVidia pod
-Linuksem. 
+Linuksem.
 
 Uwaga! Mo¿e on spaliæ kartê graficzn±!
 
@@ -58,7 +58,7 @@ This is GTK version.
 
 %description gtk -l pl
 Ten program pozwala na podkrêcanie karty graficznej NVidia pod
-Linuksem. 
+Linuksem.
 
 Uwaga! Mo¿e on spaliæ kartê graficzn±!
 
@@ -79,7 +79,7 @@ This is QT version.
 
 %description qt -l pl
 Ten program pozwala na podkrêcanie karty graficznej NVidia pod
-Linuksem. 
+Linuksem.
 
 Uwaga! Mo¿e on spaliæ kartê graficzn±!
 
