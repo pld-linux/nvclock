@@ -44,8 +44,8 @@ Ten pakiet dostarcza wspólne pliki dla ró¿nych wersji interfejsu
 graficznego programu nvclock.
 
 %package gtk
-Summary:	GTK version of nvclock
-Summary(pl):	nvclock z interfejsem GTK
+Summary:	GTK+ version of nvclock
+Summary(pl):	nvclock z interfejsem GTK+
 Group:		Applications/System
 Requires:	%{name}-common = %{version}-%{release}
 
@@ -54,7 +54,7 @@ This program allows you to overclock your NVidia card under linux.
 
 Warning! It can burn your graphics card!
 
-This is GTK version.
+This is GTK+ version.
 
 %description gtk -l pl
 Ten program pozwala na podkrêcanie karty graficznej NVidia pod
@@ -62,7 +62,7 @@ Linuksem.
 
 Uwaga! Mo¿e on spaliæ kartê graficzn±!
 
-To jest wersja GTK.
+To jest wersja GTK+.
 
 %package qt
 Summary:	Qt version of nvclock
