@@ -1,0 +1,36 @@
+diff -burN nvclock0.7.orig/src/Makefile.in nvclock0.7/src/Makefile.in
+--- nvclock0.7.orig/src/Makefile.in	Sun Jun 22 22:19:18 2003
++++ nvclock0.7/src/Makefile.in	Tue Jul 29 21:19:50 2003
+@@ -33,7 +33,7 @@
+ 
+ install: install-recursive install-app
+ install-app:
+-	$(INSTALL) -c nvclock $(bindir)/nvclock
++	$(INSTALL) -c nvclock $(DESTDIR)$(bindir)/nvclock
+ 
+ 
+ uninstall: uninstall-recursive uninstall-app
+diff -burN nvclock0.7.orig/src/gtk/Makefile.in nvclock0.7/src/gtk/Makefile.in
+--- nvclock0.7.orig/src/gtk/Makefile.in	Sun Jun 22 22:17:31 2003
++++ nvclock0.7/src/gtk/Makefile.in	Tue Jul 29 21:20:27 2003
+@@ -13,7 +13,7 @@
+ 
+ ifeq ($(HAVE_GTK2), yes)
+     PROGRAM=nvclock_gtk
+-    INSTALL_APP=$(INSTALL) -c $(PROGRAM) $(bindir)/$(PROGRAM)
++    INSTALL_APP=$(INSTALL) -c $(PROGRAM) $(DESTDIR)$(bindir)/$(PROGRAM)
+     UNINSTALL_APP=rm -f $(bindir)/$(PROGRAM)
+ endif
+ 
+diff -burN nvclock0.7.orig/src/qt/Makefile.in nvclock0.7/src/qt/Makefile.in
+--- nvclock0.7.orig/src/qt/Makefile.in	Sun Jun 22 22:27:30 2003
++++ nvclock0.7/src/qt/Makefile.in	Tue Jul 29 21:20:18 2003
+@@ -14,7 +14,7 @@
+ 
+ ifeq ($(HAVE_QT), yes)
+     PROGRAM=nvclock_qt
+-    INSTALL_APP=$(INSTALL) -c $(PROGRAM) $(bindir)/$(PROGRAM)
++    INSTALL_APP=$(INSTALL) -c $(PROGRAM) $(DESTDIR)$(bindir)/$(PROGRAM)
+     UNINSTALL_APP=rm -f $(bindir)/$(PROGRAM)
+ endif
+ 
