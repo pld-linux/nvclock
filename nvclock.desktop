@@ -7,5 +7,5 @@ Icon=nvclock.png
 Exec=nvclock_gtk
 Terminal=false
 Type=Application
-Categories=Application;System;Settings;
+Categories=Application;System;Settings;HardwareSettings;
 # vi: encoding=utf-8
