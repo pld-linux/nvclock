@@ -1,4 +1,4 @@
-Summary:	nvidia overclock utility
+Summary:	NVidia overclock utility
 Summary(pl):	Narzêdzie do podkrêcania kart NVidii
 Name:		nvclock
 Version:	0.7
@@ -7,9 +7,9 @@ License:	GPL
 Group:		Applications/System
 Source0:	http://www.linuxhardware.org/nvclock/%{name}%{version}.tar.gz
 # Source0-md5:	a3bb5ff1c2638317f1a69c7c2442b9e4
-Source1:	nvclock.png
-Source2:	nvclock.desktop
-Patch0:		nvclock-DESTDIR.patch
+Source1:	%{name}.png
+Source2:	%{name}.desktop
+Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.linuxhardware.org/nvclock/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_bindir		%{_sbindir}
 
 %description
-This program allows you to overclock your nvidia card under linux.
+This program allows you to overclock your NVidia card under linux.
 Warning! It can burn your graphics card!
 
 %description -l pl
@@ -47,7 +47,7 @@ Group:		Applications/System
 Requires:	%{name}-common = %{version}
 
 %description gtk
-This program allows you to overclock your nvidia card under linux.
+This program allows you to overclock your NVidia card under linux.
 Warning! It can burn your graphics card!
 
 This is GTK version.
@@ -67,7 +67,7 @@ Group:		Applications/System
 Requires:	%{name}-common
 
 %description qt
-This program allows you to overclock your nvidia card under linux.
+This program allows you to overclock your NVidia card under linux.
 Warning! It can burn your graphics card!
 
 This is QT version.
