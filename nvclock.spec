@@ -23,7 +23,7 @@ Linuxem.
 %setup -q -n %{name}%{version}
 
 %build
-%configure
+%configure2_13
 %{__make}
 
 %install
