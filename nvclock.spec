@@ -1,5 +1,5 @@
 Summary:	nvidia overclock utility
-Summary(pl):	Narzêdzie do podkrêcania kart nvidii
+Summary(pl):	Narzêdzie do podkrêcania kart NVidii
 Name:		nvclock
 Version:	0.7
 Release:	1
@@ -24,8 +24,8 @@ This program allows you to overclock your nvidia card under linux.
 Warning! It can burn your graphics card!
 
 %description -l pl
-Ten program pozwala Ci na podkrêcanie Twojej karty graficznej NVidia
-pod Linuksem. Uwaga! Mo¿e on spaliæ kartê graficzn±!
+Ten program pozwala na podkrêcanie karty graficznej NVidia pod
+Linuksem. Uwaga! Mo¿e on spaliæ kartê graficzn±!
 
 %package common
 Summary:	Common files for different GUI versions of nvclock
@@ -33,17 +33,18 @@ Summary(pl):	Wspólne pliki dla ró¿nych wersji GUI nvclock
 Group:		Applications/System
 
 %description common
-This packge provides common files for different GUI versions of nvclock.
+This packge provides common files for different GUI versions of
+nvclock.
 
 %description common -l pl
-Ten pakiet dostarcza wspólnych plików dla ró¿nych wersji GUI programu
-nvclock.
+Ten pakiet dostarcza wspólne pliki dla ró¿nych wersji interfejsu
+graficznego programu nvclock.
 
 %package gtk
 Summary:	GTK version of nvclock
 Summary(pl):	nvclock z interfejsem GTK
 Group:		Applications/System
-Requires:	%{name}-common
+Requires:	%{name}-common = %{version}
 
 %description gtk
 This program allows you to overclock your nvidia card under linux.
@@ -52,8 +53,8 @@ Warning! It can burn your graphics card!
 This is GTK version.
 
 %description gtk -l pl
-Ten program pozwala Ci na podkrêcanie Twojej karty graficznej NVidia
-pod Linuksem. 
+Ten program pozwala na podkrêcanie karty graficznej NVidia pod
+Linuksem. 
 
 Uwaga! Mo¿e on spaliæ kartê graficzn±!
 
@@ -72,8 +73,8 @@ Warning! It can burn your graphics card!
 This is QT version.
 
 %description qt -l pl
-Ten program pozwala Ci na podkrêcanie Twojej karty graficznej NVidia
-pod Linuksem. 
+Ten program pozwala na podkrêcanie karty graficznej NVidia pod
+Linuksem. 
 
 Uwaga! Mo¿e on spaliæ kartê graficzn±!
 
