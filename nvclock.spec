@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://ftp.evil3d.net/pub/Evil3D/nvclock/%{name}%{version}.tar.gz
+# Source0-md5:	4e07a89284702c515039f5ec22ec0a37
 Source1:	nvclock.png
 URL:		http://www.evil3d.net/products/nvclock/
 BuildRequires:	autoconf
