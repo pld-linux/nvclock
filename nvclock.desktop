@@ -4,5 +4,5 @@ Comment=nvidia overclock utility
 Comment[pl]=Narzêdzie do podkrêcania kart nvidii
 Icon=nvclock.png
 Exec=nvclock_gtk
-Terminal=0
+Terminal=false
 Type=Application
