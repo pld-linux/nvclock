@@ -65,8 +65,8 @@ Uwaga! Mo¿e on spaliæ kartê graficzn±!
 To jest wersja GTK.
 
 %package qt
-Summary:	QT version of nvclock
-Summary(pl):	nvclock z interfejsem QT
+Summary:	Qt version of nvclock
+Summary(pl):	nvclock z interfejsem Qt
 Group:		Applications/System
 Requires:	%{name}-common = %{version}-%{release}
 
@@ -75,7 +75,7 @@ This program allows you to overclock your NVidia card under linux.
 
 Warning! It can burn your graphics card!
 
-This is QT version.
+This is Qt version.
 
 %description qt -l pl
 Ten program pozwala na podkrêcanie karty graficznej NVidia pod
@@ -83,7 +83,7 @@ Linuksem.
 
 Uwaga! Mo¿e on spaliæ kartê graficzn±!
 
-To jest wersja QT.
+To jest wersja Qt.
 
 %prep
 %setup -q -n %{name}%{version}
