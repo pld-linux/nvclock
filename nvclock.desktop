@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=nvclock
 Comment=nvidia overclock utility
-Comment[pl]=Narzêdzie do podkrêcania kart nvidii
+Comment[pl]=NarzÄ™dzie do podkrÄ™cania kart nvidii
 Icon=nvclock.png
 Exec=nvclock_gtk
 Terminal=false
