@@ -2,7 +2,7 @@ Summary:	NVidia overclock utility
 Summary(pl):	Narzêdzie do podkrêcania kart NVidii
 Name:		nvclock
 Version:	0.7
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.linuxhardware.org/nvclock/%{name}%{version}.tar.gz
@@ -101,13 +101,13 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_sbindir},%{_applnkdir}/System,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_sbindir},%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
-install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/System
+install %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -120,7 +120,7 @@ rm -rf $RPM_BUILD_ROOT
 %files common
 %defattr(644,root,root,755)
 %{_pixmapsdir}/*
-%{_applnkdir}/System/*
+%{_desktopdir}/*
 
 %files gtk
 %defattr(644,root,root,755)
