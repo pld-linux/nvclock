@@ -7,6 +7,8 @@ License:	GPL
 Group:		Applications/System
 Source0:	ftp://ftp.evil3d.net/pub/Evil3D/nvclock/%{name}%{version}.tar.gz
 URL:		http://www.evil3d.net/products/nvclock/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gtk+-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,7 +37,12 @@ Interfejs GTK dla nvclock.
 %setup -q -n %{name}%{version}
 
 %build
-%configure2_13 \
+rm -f missing
+aclocal
+autoheader
+autoconf
+automake -a -c -f
+%configure \
 	--enable-gtk
 %{__make}
 
