@@ -5,8 +5,6 @@ Version:	0.2
 Release:	2
 License:	GPL
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Source0:	ftp://ftp.evil3d.net/pub/Evil3D/nvclock/%{name}%{version}.tar.gz
 URL:		http://www.evil3d.net/products/nvclock/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
