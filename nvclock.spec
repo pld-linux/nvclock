@@ -2,7 +2,7 @@ Summary:	NVidia overclock utility
 Summary(pl):	Narzêdzie do podkrêcania kart NVidii
 Name:		nvclock
 Version:	0.7
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.linuxhardware.org/nvclock/%{name}%{version}.tar.gz
@@ -36,7 +36,7 @@ Summary(pl):	Wspólne pliki dla ró¿nych wersji GUI nvclock
 Group:		Applications/System
 
 %description common
-This packge provides common files for different GUI versions of
+This package provides common files for different GUI versions of
 nvclock.
 
 %description common -l pl
@@ -47,7 +47,7 @@ graficznego programu nvclock.
 Summary:	GTK version of nvclock
 Summary(pl):	nvclock z interfejsem GTK
 Group:		Applications/System
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description gtk
 This program allows you to overclock your NVidia card under linux.
@@ -68,7 +68,7 @@ To jest wersja GTK.
 Summary:	QT version of nvclock
 Summary(pl):	nvclock z interfejsem QT
 Group:		Applications/System
-Requires:	%{name}-common
+Requires:	%{name}-common = %{version}-%{release}
 
 %description qt
 This program allows you to overclock your NVidia card under linux.
@@ -89,8 +89,9 @@ To jest wersja QT.
 %setup -q -n %{name}%{version}
 %patch0 -p1
 
+%{__perl} -pi -e 's/-lqt/-lqt-mt/' src/qt/Makefile.in
+
 %build
-rm -f missing
 %{__aclocal}
 %{__autoheader}
 %{__autoconf}
