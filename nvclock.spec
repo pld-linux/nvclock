@@ -1,23 +1,24 @@
 Summary:	nvidia overclock utility
-Summary(pl):	narzêdzie do podkrêcania kart nvidia
+Summary(pl):	Narzêdzie do podkrêcania kart nvidia
 Name:		nvclock
 Version:	0.2
-Release:	1
+Release:	2
 License:	GPL
-Group:		Networking/Admin
-Group(pl):	Sieciowe/Administracyjne
+Group:		Applications/System
+Group(de):	Applikationen/System
+Group(pl):	Aplikacje/System
 Source0:	ftp://ftp.evil3d.net/pub/Evil3D/nvclock/%{name}%{version}.tar.gz
 URL:		http://www.evil3d.net/products/nvclock/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_bindir	%{_sbindir}
+%define		_bindir		%{_sbindir}
 
 %description
 This program allows you to overclock your nvidia card under linux.
 
 %description -l pl
-Ten program pozwala Ci na podkrêcanie Twojej karty graficznej NVidia pod
-Linuxem.
+Ten program pozwala Ci na podkrêcanie Twojej karty graficznej NVidia
+pod Linuksem.
 
 %prep
 %setup -q -n %{name}%{version}
