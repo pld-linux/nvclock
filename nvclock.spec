@@ -21,11 +21,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This program allows you to overclock your NVidia card under linux.
+
 Warning! It can burn your graphics card!
 
 %description -l pl
 Ten program pozwala na podkrêcanie karty graficznej NVidia pod
-Linuksem. Uwaga! Mo¿e on spaliæ kartê graficzn±!
+Linuksem. 
+
+Uwaga! Mo¿e on spaliæ kartê graficzn±!
 
 %package common
 Summary:	Common files for different GUI versions of nvclock
@@ -48,6 +51,7 @@ Requires:	%{name}-common = %{version}
 
 %description gtk
 This program allows you to overclock your NVidia card under linux.
+
 Warning! It can burn your graphics card!
 
 This is GTK version.
@@ -68,6 +72,7 @@ Requires:	%{name}-common
 
 %description qt
 This program allows you to overclock your NVidia card under linux.
+
 Warning! It can burn your graphics card!
 
 This is QT version.
@@ -89,7 +94,6 @@ rm -f missing
 %{__aclocal}
 %{__autoheader}
 %{__autoconf}
-#%{__automake}
 %configure \
 	--enable-gtk \
 	--enable-qt
