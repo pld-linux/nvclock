@@ -47,8 +47,8 @@ To jest wersja GTK.
 rm -f missing
 aclocal
 autoheader
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure \
 	--enable-gtk
 %{__make}
