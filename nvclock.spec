@@ -60,8 +60,6 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/System,%{_pixmapsdir}}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf ABOUT AUTHORS ChangeLog FAQ README
-
 install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
 cat >$RPM_BUILD_ROOT%{_applnkdir}/System/nvclock.desktop <<EOF
 [Desktop Entry]
@@ -79,7 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc ABOUT AUTHORS ChangeLog FAQ README
 %attr(755,root,root) %{_bindir}/nvclock
 
 %files gtk
