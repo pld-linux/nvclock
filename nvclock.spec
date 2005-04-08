@@ -13,8 +13,10 @@ Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.linuxhardware.org/nvclock/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+-devel
+BuildRequires:	gtk+2-devel
 BuildRequires:	qt-devel
+BuildRequires:	pkgconfig
+ExcludeArch:	amd64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		%{_sbindir}
