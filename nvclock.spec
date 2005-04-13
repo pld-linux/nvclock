@@ -18,7 +18,7 @@ BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	qt-devel >= 2.2.0
 BuildRequires:	pkgconfig
 # I doubt if it works on anything other than x86 when it doesn't work on amd64...
-ExclusiveArch:	amd64
+ExcludeArch:	amd64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		%{_sbindir}
