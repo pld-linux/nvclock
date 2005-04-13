@@ -1,3 +1,4 @@
+# TODO: security problem (/tmp/nvclock symlink attack possible)
 Summary:	NVidia overclock utility
 Summary(pl):	Narzêdzie do podkrêcania kart NVidii
 Name:		nvclock
@@ -13,10 +14,11 @@ Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.linuxhardware.org/nvclock/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel
-BuildRequires:	qt-devel
+BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	qt-devel >= 2.2.0
 BuildRequires:	pkgconfig
-ExcludeArch:	amd64
+# I doubt if it works on anything other than x86 when it doesn't work on amd64...
+ExclusiveArch:	amd64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		%{_sbindir}
