@@ -2,19 +2,19 @@
 Summary:	NVidia overclock utility
 Summary(pl):	Narzêdzie do podkrêcania kart NVidii
 Name:		nvclock
-Version:	0.7
-Release:	3
+Version:	0.8b
+Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.linuxhardware.org/nvclock/%{name}%{version}.tar.gz
-# Source0-md5:	a3bb5ff1c2638317f1a69c7c2442b9e4
+# Source0-md5:	a987c47e749a65922d7ff25817eda3b8
 Source1:	%{name}.png
 Source2:	%{name}.desktop
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.linuxhardware.org/nvclock/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	gtk+2-devel >= 2.4.0
 BuildRequires:	qt-devel >= 2.2.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.213
@@ -102,7 +102,8 @@ To jest wersja Qt.
 %{__autoconf}
 %configure \
 	--enable-gtk \
-	--enable-qt
+	--enable-qt \
+	QT_LIB_DIR=%{_libdir}
 %{__make}
 
 %install
@@ -122,6 +123,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ABOUT AUTHORS ChangeLog FAQ README
 %attr(755,root,root) %{_sbindir}/nvclock
+%{_mandir}/man1/nvclock*
 
 %files common
 %defattr(644,root,root,755)
