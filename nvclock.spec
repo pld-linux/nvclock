@@ -2,12 +2,12 @@
 Summary:	NVidia overclock utility
 Summary(pl):	Narzêdzie do podkrêcania kart NVidii
 Name:		nvclock
-Version:	0.8b
+Version:	0.8b2
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.linuxhardware.org/nvclock/%{name}%{version}.tar.gz
-# Source0-md5:	a987c47e749a65922d7ff25817eda3b8
+# Source0-md5:	8b9f55115f3c5b7b9a9a16fe40cec4a5
 Source1:	%{name}.png
 Source2:	%{name}.desktop
 Patch0:		%{name}-DESTDIR.patch
