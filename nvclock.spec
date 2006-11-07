@@ -128,7 +128,7 @@ rm -rf $RPM_BUILD_ROOT
 %files common
 %defattr(644,root,root,755)
 %{_pixmapsdir}/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 
 %files gtk
 %defattr(644,root,root,755)
