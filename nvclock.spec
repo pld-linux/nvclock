@@ -1,6 +1,6 @@
 # TODO: security problem (/tmp/nvclock symlink attack possible)
 Summary:	NVidia overclock utility
-Summary(pl):	Narzêdzie do podkrêcania kart NVidii
+Summary(pl.UTF-8):   NarzÄ™dzie do podkrÄ™cania kart NVidii
 Name:		nvclock
 Version:	0.8b2
 Release:	1
@@ -29,28 +29,28 @@ This program allows you to overclock your NVidia card under linux.
 
 Warning! It can burn your graphics card!
 
-%description -l pl
-Ten program pozwala na podkrêcanie karty graficznej NVidia pod
+%description -l pl.UTF-8
+Ten program pozwala na podkrÄ™canie karty graficznej NVidia pod
 Linuksem.
 
-Uwaga! Mo¿e on spaliæ kartê graficzn±!
+Uwaga! MoÅ¼e on spaliÄ‡ kartÄ™ graficznÄ…!
 
 %package common
 Summary:	Common files for different GUI versions of nvclock
-Summary(pl):	Wspólne pliki dla ró¿nych wersji GUI nvclock
+Summary(pl.UTF-8):   WspÃ³lne pliki dla rÃ³Å¼nych wersji GUI nvclock
 Group:		Applications/System
 
 %description common
 This package provides common files for different GUI versions of
 nvclock.
 
-%description common -l pl
-Ten pakiet dostarcza wspólne pliki dla ró¿nych wersji interfejsu
+%description common -l pl.UTF-8
+Ten pakiet dostarcza wspÃ³lne pliki dla rÃ³Å¼nych wersji interfejsu
 graficznego programu nvclock.
 
 %package gtk
 Summary:	GTK+ version of nvclock
-Summary(pl):	nvclock z interfejsem GTK+
+Summary(pl.UTF-8):   nvclock z interfejsem GTK+
 Group:		Applications/System
 Requires:	%{name}-common = %{version}-%{release}
 
@@ -61,17 +61,17 @@ Warning! It can burn your graphics card!
 
 This is GTK+ version.
 
-%description gtk -l pl
-Ten program pozwala na podkrêcanie karty graficznej NVidia pod
+%description gtk -l pl.UTF-8
+Ten program pozwala na podkrÄ™canie karty graficznej NVidia pod
 Linuksem.
 
-Uwaga! Mo¿e on spaliæ kartê graficzn±!
+Uwaga! MoÅ¼e on spaliÄ‡ kartÄ™ graficznÄ…!
 
 To jest wersja GTK+.
 
 %package qt
 Summary:	Qt version of nvclock
-Summary(pl):	nvclock z interfejsem Qt
+Summary(pl.UTF-8):   nvclock z interfejsem Qt
 Group:		Applications/System
 Requires:	%{name}-common = %{version}-%{release}
 
@@ -82,11 +82,11 @@ Warning! It can burn your graphics card!
 
 This is Qt version.
 
-%description qt -l pl
-Ten program pozwala na podkrêcanie karty graficznej NVidia pod
+%description qt -l pl.UTF-8
+Ten program pozwala na podkrÄ™canie karty graficznej NVidia pod
 Linuksem.
 
-Uwaga! Mo¿e on spaliæ kartê graficzn±!
+Uwaga! MoÅ¼e on spaliÄ‡ kartÄ™ graficznÄ…!
 
 To jest wersja Qt.
 
