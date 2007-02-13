@@ -1,6 +1,6 @@
 # TODO: security problem (/tmp/nvclock symlink attack possible)
 Summary:	NVidia overclock utility
-Summary(pl.UTF-8):   Narzędzie do podkręcania kart NVidii
+Summary(pl.UTF-8):	Narzędzie do podkręcania kart NVidii
 Name:		nvclock
 Version:	0.8b2
 Release:	1
@@ -37,7 +37,7 @@ Uwaga! Może on spalić kartę graficzną!
 
 %package common
 Summary:	Common files for different GUI versions of nvclock
-Summary(pl.UTF-8):   Wspólne pliki dla różnych wersji GUI nvclock
+Summary(pl.UTF-8):	Wspólne pliki dla różnych wersji GUI nvclock
 Group:		Applications/System
 
 %description common
@@ -50,7 +50,7 @@ graficznego programu nvclock.
 
 %package gtk
 Summary:	GTK+ version of nvclock
-Summary(pl.UTF-8):   nvclock z interfejsem GTK+
+Summary(pl.UTF-8):	nvclock z interfejsem GTK+
 Group:		Applications/System
 Requires:	%{name}-common = %{version}-%{release}
 
@@ -71,7 +71,7 @@ To jest wersja GTK+.
 
 %package qt
 Summary:	Qt version of nvclock
-Summary(pl.UTF-8):   nvclock z interfejsem Qt
+Summary(pl.UTF-8):	nvclock z interfejsem Qt
 Group:		Applications/System
 Requires:	%{name}-common = %{version}-%{release}
 
