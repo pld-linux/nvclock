@@ -1,9 +1,8 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=nvclock
 Comment=nvidia overclock utility
 Comment[pl]=Narzędzie do podkręcania kart nvidii
-Icon=nvclock.png
+Icon=nvclock
 Exec=nvclock_gtk
 Terminal=false
 Type=Application
