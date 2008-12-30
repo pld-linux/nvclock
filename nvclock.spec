@@ -2,12 +2,12 @@
 Summary:	NVidia overclock utility
 Summary(pl.UTF-8):	Narzędzie do podkręcania kart NVidii
 Name:		nvclock
-Version:	0.8b2
+Version:	0.8b3a
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.linuxhardware.org/nvclock/%{name}%{version}.tar.gz
-# Source0-md5:	8b9f55115f3c5b7b9a9a16fe40cec4a5
+# Source0-md5:	8e5c47ff638603e4a7ccd1325ef765ef
 Source1:	%{name}.png
 Source2:	%{name}.desktop
 Patch0:		%{name}-DESTDIR.patch
@@ -104,7 +104,7 @@ To jest wersja Qt.
 	--enable-gtk \
 	--enable-qt \
 	QT_LIB_DIR=%{_libdir}
-%{__make}
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
