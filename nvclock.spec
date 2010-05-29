@@ -2,12 +2,12 @@
 Summary:	NVidia overclock utility
 Summary(pl.UTF-8):	Narzędzie do podkręcania kart NVidii
 Name:		nvclock
-Version:	0.8b3a
+Version:	0.8b4
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.linuxhardware.org/nvclock/%{name}%{version}.tar.gz
-# Source0-md5:	8e5c47ff638603e4a7ccd1325ef765ef
+# Source0-md5:	23f1b3ebf40f35d76d5fdac50f66ab11
 Source1:	%{name}.png
 Source2:	%{name}.desktop
 Patch0:		%{name}-DESTDIR.patch
@@ -18,11 +18,7 @@ BuildRequires:	gtk+2-devel >= 2.4.0
 BuildRequires:	qt-devel >= 2.2.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.213
-# I doubt if it works on anything other than x86 when it doesn't work on amd64...
-ExcludeArch:	%{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_bindir		%{_sbindir}
 
 %description
 This program allows you to overclock your NVidia card under linux.
@@ -108,7 +104,7 @@ To jest wersja Qt.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_sbindir},%{_desktopdir},%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -122,18 +118,20 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ABOUT AUTHORS ChangeLog FAQ README
-%attr(755,root,root) %{_sbindir}/nvclock
+%attr(755,root,root) %{_bindir}/nvclock
+%attr(755,root,root) %{_bindir}/smartdimmer
 %{_mandir}/man1/nvclock*
 
 %files common
 %defattr(644,root,root,755)
+%{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_pixmapsdir}/*
 %{_desktopdir}/*.desktop
 
 %files gtk
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_sbindir}/nvclock_gtk
+%attr(755,root,root) %{_bindir}/nvclock_gtk
 
 %files qt
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_sbindir}/nvclock_qt
+%attr(755,root,root) %{_bindir}/nvclock_qt
