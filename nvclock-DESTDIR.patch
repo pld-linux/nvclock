@@ -1,38 +1,5 @@
---- nvclock0.8b/src/Makefile.in.orig	2005-09-02 10:55:12.000000000 +0200
-+++ nvclock0.8b/src/Makefile.in	2006-01-21 06:03:28.000000000 +0100
-@@ -45,7 +45,7 @@
- install: install-recursive install-app
- install-app:
- 	mkdir -p $(bindir)
--	$(INSTALL) -c nvclock $(bindir)/nvclock
-+	$(INSTALL) -c nvclock $(DESTDIR)$(bindir)/nvclock
- 
- 
- uninstall: uninstall-recursive uninstall-app
---- nvclock0.8b/src/gtk/Makefile.in.orig	2005-09-02 10:32:49.000000000 +0200
-+++ nvclock0.8b/src/gtk/Makefile.in	2006-01-21 06:06:03.000000000 +0100
-@@ -13,7 +13,7 @@
- 
- ifeq ($(HAVE_GTK2), yes)
-     PROGRAM=nvclock_gtk
--    INSTALL_APP=mkdir -p $(bindir); $(INSTALL) -c $(PROGRAM) $(bindir)/$(PROGRAM)
-+    INSTALL_APP=mkdir -p $(DESTDIR)$(bindir); $(INSTALL) -c $(PROGRAM) $(DESTDIR)$(bindir)/$(PROGRAM)
-     UNINSTALL_APP=rm -f $(bindir)/$(PROGRAM)
- endif
- 
---- nvclock0.8b/src/qt/Makefile.in.orig	2005-09-02 10:33:01.000000000 +0200
-+++ nvclock0.8b/src/qt/Makefile.in	2006-01-21 06:07:24.000000000 +0100
-@@ -14,7 +14,7 @@
- 
- ifeq ($(HAVE_QT), yes)
-     PROGRAM=nvclock_qt
--    INSTALL_APP=mkdir -p $(bindir); $(INSTALL) -c $(PROGRAM) $(bindir)/$(PROGRAM)
-+    INSTALL_APP=mkdir -p $(DESTDIR)$(bindir); $(INSTALL) -c $(PROGRAM) $(DESTDIR)$(bindir)/$(PROGRAM)
-     UNINSTALL_APP=rm -f $(bindir)/$(PROGRAM)
- endif
- 
---- nvclock0.8b/Makefile.in.old	2005-05-28 16:07:10.000000000 +0200
-+++ nvclock0.8b/Makefile.in	2006-01-21 13:03:11.000000000 +0100
+--- nvclock0.8b4/Makefile.in	2005-05-29 22:49:28.000000000 +0000
++++ nvclock0.8b4/Makefile.in	2006-01-29 22:51:06.000000000 +0000
 @@ -2,7 +2,7 @@
  
  prefix=@prefix@
@@ -46,19 +13,21 @@
  	$(MAKE) -C src distclean
  	rm -f *.h config.log config.cache config.status Makefile stamp-h
  
--install: install-docs install-man
-+install: install-man
+-install: install-docs install-man install-desktop-shortcut
++install: install-man install-desktop-shortcut
  	$(MAKE) -C src install
  
  install-docs:
-@@ -30,8 +30,8 @@
- 	done
+--- nvclock0.8b4/src/Makefile.in	2010-05-29 22:49:28.000000000 +0000
++++ nvclock0.8b4/src/Makefile.in	2010-05-29 22:51:06.000000000 +0000
+@@ -50,8 +50,8 @@
+ install: install-recursive install-app
+ install-app:
+ 	mkdir -p $(bindir)
+-	$(INSTALL) -c nvclock $(DESTDIR)$(bindir)/nvclock
+-	$(INSTALL) -c smartdimmer $(DESTDIR)$(bindir)/smartdimmer
++	$(INSTALL) -c nvclock $(bindir)/nvclock
++	$(INSTALL) -c smartdimmer $(bindir)/smartdimmer
  
- install-man:
--	mkdir -p $(mandir)/man1
--	cp nvclock.1 $(mandir)/man1
-+	mkdir -p $(DESTDIR)$(mandir)/man1
-+	cp nvclock.1 $(DESTDIR)$(mandir)/man1
  
- uninstall: uninstall-docs uninstall-man
- 	$(MAKE) -C src uninstall
+ uninstall: uninstall-recursive uninstall-app
